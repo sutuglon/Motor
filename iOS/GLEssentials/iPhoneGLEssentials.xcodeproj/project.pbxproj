@@ -95,19 +95,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F45E36DB14092AD600FCF221 /* PBXContainerItemProxy */ = {
+		F417E679140ACE41005444D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F45E36D414092AD600FCF221 /* CollideIOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = CollideIOS;
-		};
-		F45E36ED14092AF000FCF221 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F45E36E614092AF000FCF221 /* iOSCPNG.xcodeproj */;
+			containerPortal = F417E672140ACE41005444D9 /* iOSCPNG.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = iOSCPNG;
+		};
+		F417E682140ACE46005444D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F417E67B140ACE46005444D9 /* CollideIOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = CollideIOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,6 +134,8 @@
 		3A609EB811B9DCF200AA4C48 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* iPhoneGLEssentials-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPhoneGLEssentials-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		AF31B2271301C52D006A0A99 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F417E672140ACE41005444D9 /* iOSCPNG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSCPNG.xcodeproj; path = ../../lib/CPNG/iOSCPNG.xcodeproj; sourceTree = "<group>"; };
+		F417E67B140ACE46005444D9 /* CollideIOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CollideIOS.xcodeproj; path = ../../lib/Collide/CollideIOS.xcodeproj; sourceTree = "<group>"; };
 		F4279F9C132A3429003D6B4D /* shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
 		F4279F9D132A3429003D6B4D /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
 		F427A04D132A43AD003D6B4D /* chrono.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chrono.cpp; sourceTree = "<group>"; };
@@ -214,8 +216,6 @@
 		F4480D8B1344BBA300FE3ED4 /* snowman.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = snowman.bin; sourceTree = "<group>"; };
 		F4480D8C1344BBA300FE3ED4 /* wood_col.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = wood_col.bin; sourceTree = "<group>"; };
 		F4480D8D1344BBA300FE3ED4 /* wood.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = wood.bin; sourceTree = "<group>"; };
-		F45E36D414092AD600FCF221 /* CollideIOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CollideIOS.xcodeproj; path = ../lib/Collide/CollideIOS.xcodeproj; sourceTree = "<group>"; };
-		F45E36E614092AF000FCF221 /* iOSCPNG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSCPNG.xcodeproj; path = ../lib/CPNG/iOSCPNG.xcodeproj; sourceTree = "<group>"; };
 		F45E396113ABCE1600EB120E /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources/iPhone/iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		F47929FE13435F9700E8161E /* IO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IO.h; sourceTree = "<group>"; };
 		F4792A1B13437CEF00E8161E /* sphere.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = sphere.vsh; sourceTree = "<group>"; };
@@ -349,8 +349,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F45E36E614092AF000FCF221 /* iOSCPNG.xcodeproj */,
-				F45E36D414092AD600FCF221 /* CollideIOS.xcodeproj */,
+				F417E67B140ACE46005444D9 /* CollideIOS.xcodeproj */,
+				F417E672140ACE41005444D9 /* iOSCPNG.xcodeproj */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
@@ -377,6 +377,22 @@
 				F4792A1D13437CFD00E8161E /* sphere.fsh */,
 			);
 			name = Shaders;
+			sourceTree = "<group>";
+		};
+		F417E673140ACE41005444D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F417E67A140ACE41005444D9 /* libiOSCPNG.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F417E67C140ACE46005444D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F417E683140ACE46005444D9 /* libCollideIOS.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F4279F88132A33C1003D6B4D /* program */ = {
@@ -470,22 +486,6 @@
 				F427A098132A4532003D6B4D /* texture.cpp */,
 			);
 			name = obj;
-			sourceTree = "<group>";
-		};
-		F45E36D514092AD600FCF221 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F45E36DC14092AD600FCF221 /* libCollideIOS.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F45E36E714092AF000FCF221 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F45E36EE14092AF000FCF221 /* libiOSCPNG.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F45E396013ABCE1100EB120E /* iPad */ = {
@@ -611,12 +611,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F45E36D514092AD600FCF221 /* Products */;
-					ProjectRef = F45E36D414092AD600FCF221 /* CollideIOS.xcodeproj */;
+					ProductGroup = F417E67C140ACE46005444D9 /* Products */;
+					ProjectRef = F417E67B140ACE46005444D9 /* CollideIOS.xcodeproj */;
 				},
 				{
-					ProductGroup = F45E36E714092AF000FCF221 /* Products */;
-					ProjectRef = F45E36E614092AF000FCF221 /* iOSCPNG.xcodeproj */;
+					ProductGroup = F417E673140ACE41005444D9 /* Products */;
+					ProjectRef = F417E672140ACE41005444D9 /* iOSCPNG.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -627,18 +627,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F45E36DC14092AD600FCF221 /* libCollideIOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libCollideIOS.a;
-			remoteRef = F45E36DB14092AD600FCF221 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F45E36EE14092AF000FCF221 /* libiOSCPNG.a */ = {
+		F417E67A140ACE41005444D9 /* libiOSCPNG.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libiOSCPNG.a;
-			remoteRef = F45E36ED14092AF000FCF221 /* PBXContainerItemProxy */;
+			remoteRef = F417E679140ACE41005444D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F417E683140ACE46005444D9 /* libCollideIOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCollideIOS.a;
+			remoteRef = F417E682140ACE46005444D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

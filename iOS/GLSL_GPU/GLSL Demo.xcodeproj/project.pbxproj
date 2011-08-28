@@ -86,30 +86,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F45E36BE14092AB000FCF221 /* PBXContainerItemProxy */ = {
+		F417E6A3140ACED8005444D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F45E36B614092AB000FCF221 /* Collide.xcodeproj */;
+			containerPortal = F417E69B140ACED8005444D9 /* Collide.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DD76F6C0486A84900D96B5E;
 			remoteInfo = Collide;
 		};
-		F45E36C014092AB000FCF221 /* PBXContainerItemProxy */ = {
+		F417E6A5140ACED8005444D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F45E36B614092AB000FCF221 /* Collide.xcodeproj */;
+			containerPortal = F417E69B140ACED8005444D9 /* Collide.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F4065D62131D3C7800F38C82;
 			remoteInfo = CollideLib;
 		};
-		F45E36CA14092AB700FCF221 /* PBXContainerItemProxy */ = {
+		F417E6AF140ACEDC005444D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F45E36C214092AB700FCF221 /* CPNG.xcodeproj */;
+			containerPortal = F417E6A7140ACEDC005444D9 /* CPNG.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DD76F6C0486A84900D96B5E;
 			remoteInfo = CPNG;
 		};
-		F45E36CC14092AB700FCF221 /* PBXContainerItemProxy */ = {
+		F417E6B1140ACEDC005444D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F45E36C214092AB700FCF221 /* CPNG.xcodeproj */;
+			containerPortal = F417E6A7140ACEDC005444D9 /* CPNG.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F4CFF84B114D036400A7D179;
 			remoteInfo = CPNGlib;
@@ -244,14 +244,14 @@
 		F40D535512BA2AD00012BD1D /* normalmap.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = normalmap.frag; sourceTree = "<group>"; };
 		F40DF0FE12D7AEB30039341C /* cubemapping.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cubemapping.vert; sourceTree = "<group>"; };
 		F40DF10012D7AEBD0039341C /* cubemapping.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cubemapping.frag; sourceTree = "<group>"; };
+		F417E69B140ACED8005444D9 /* Collide.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Collide.xcodeproj; path = ../../lib/Collide/Collide.xcodeproj; sourceTree = "<group>"; };
+		F417E6A7140ACEDC005444D9 /* CPNG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CPNG.xcodeproj; path = ../../lib/CPNG/CPNG.xcodeproj; sourceTree = "<group>"; };
 		F422817012FBFD330023F94E /* particles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particles.cpp; sourceTree = "<group>"; };
 		F422817112FBFD330023F94E /* particles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particles.h; sourceTree = "<group>"; };
 		F42CAF9C131260120061E222 /* quat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quat.h; sourceTree = "<group>"; };
 		F45E365A140924FC00FCF221 /* libpng15.15.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng15.15.dylib; path = SDKs/MacOSX10.7.sdk/usr/X11/lib/libpng15.15.dylib; sourceTree = DEVELOPER_DIR; };
 		F45E365C1409252000FCF221 /* libpng12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng12.0.dylib; path = usr/X11/lib/libpng12.0.dylib; sourceTree = SDKROOT; };
 		F45E365E1409254600FCF221 /* libpng15.15.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng15.15.dylib; path = SDKs/MacOSX10.7.sdk/usr/X11/lib/libpng15.15.dylib; sourceTree = DEVELOPER_DIR; };
-		F45E36B614092AB000FCF221 /* Collide.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Collide.xcodeproj; path = ../lib/Collide/Collide.xcodeproj; sourceTree = "<group>"; };
-		F45E36C214092AB700FCF221 /* CPNG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CPNG.xcodeproj; path = ../lib/CPNG/CPNG.xcodeproj; sourceTree = "<group>"; };
 		F45E393813ABC5F600EB120E /* pulmonTris.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pulmonTris.obj; sourceTree = "<group>"; };
 		F45E393913ABC6C100EB120E /* pulmonTris_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulmonTris_d.png; sourceTree = "<group>"; };
 		F46CA4461314286F00FC05C2 /* intersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intersection.h; sourceTree = "<group>"; };
@@ -375,8 +375,8 @@
 		6E5F756610AA118600BFFA12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F45E36C214092AB700FCF221 /* CPNG.xcodeproj */,
-				F45E36B614092AB000FCF221 /* Collide.xcodeproj */,
+				F417E6A7140ACEDC005444D9 /* CPNG.xcodeproj */,
+				F417E69B140ACED8005444D9 /* Collide.xcodeproj */,
 				6E5F756710AA11A600BFFA12 /* GLUT.framework */,
 				6E5F756910AA11A600BFFA12 /* OpenGL.framework */,
 			);
@@ -455,6 +455,24 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		F417E69C140ACED8005444D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F417E6A4140ACED8005444D9 /* Collide */,
+				F417E6A6140ACED8005444D9 /* libCollideLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F417E6A8140ACEDC005444D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F417E6B0140ACEDC005444D9 /* CPNG */,
+				F417E6B2140ACEDC005444D9 /* libCPNGlib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F422815412FBFAF00023F94E /* obj */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,24 +529,6 @@
 				F46CA4471314286F00FC05C2 /* intersection.cpp */,
 			);
 			name = math;
-			sourceTree = "<group>";
-		};
-		F45E36B714092AB000FCF221 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F45E36BF14092AB000FCF221 /* Collide */,
-				F45E36C114092AB000FCF221 /* libCollideLib.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F45E36C314092AB700FCF221 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F45E36CB14092AB700FCF221 /* CPNG */,
-				F45E36CD14092AB700FCF221 /* libCPNGlib.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F483E25612DB473300F08AC4 /* diff */ = {
@@ -638,12 +638,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F45E36B714092AB000FCF221 /* Products */;
-					ProjectRef = F45E36B614092AB000FCF221 /* Collide.xcodeproj */;
+					ProductGroup = F417E69C140ACED8005444D9 /* Products */;
+					ProjectRef = F417E69B140ACED8005444D9 /* Collide.xcodeproj */;
 				},
 				{
-					ProductGroup = F45E36C314092AB700FCF221 /* Products */;
-					ProjectRef = F45E36C214092AB700FCF221 /* CPNG.xcodeproj */;
+					ProductGroup = F417E6A8140ACEDC005444D9 /* Products */;
+					ProjectRef = F417E6A7140ACEDC005444D9 /* CPNG.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -654,32 +654,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F45E36BF14092AB000FCF221 /* Collide */ = {
+		F417E6A4140ACED8005444D9 /* Collide */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = Collide;
-			remoteRef = F45E36BE14092AB000FCF221 /* PBXContainerItemProxy */;
+			remoteRef = F417E6A3140ACED8005444D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F45E36C114092AB000FCF221 /* libCollideLib.a */ = {
+		F417E6A6140ACED8005444D9 /* libCollideLib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCollideLib.a;
-			remoteRef = F45E36C014092AB000FCF221 /* PBXContainerItemProxy */;
+			remoteRef = F417E6A5140ACED8005444D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F45E36CB14092AB700FCF221 /* CPNG */ = {
+		F417E6B0140ACEDC005444D9 /* CPNG */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = CPNG;
-			remoteRef = F45E36CA14092AB700FCF221 /* PBXContainerItemProxy */;
+			remoteRef = F417E6AF140ACEDC005444D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F45E36CD14092AB700FCF221 /* libCPNGlib.a */ = {
+		F417E6B2140ACEDC005444D9 /* libCPNGlib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCPNGlib.a;
-			remoteRef = F45E36CC14092AB700FCF221 /* PBXContainerItemProxy */;
+			remoteRef = F417E6B1140ACEDC005444D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

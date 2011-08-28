@@ -1,0 +1,157 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeSDKPreference = iphoneos4.2;
+		activeTarget = D2AAC07D0554694100DB518D /* CollideIOS */;
+		addToTargets = (
+			D2AAC07D0554694100DB518D /* CollideIOS */,
+		);
+		codeSenseManager = F463FC72132E353100D48B88 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					612,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 321795396;
+			PBXWorkspaceStateSaveDate = 321795396;
+		};
+		perUserProjectItems = {
+			F463FD9A132E36A300D48B88 /* PBXTextBookmark */ = F463FD9A132E36A300D48B88 /* PBXTextBookmark */;
+			F463FD9B132E36A300D48B88 /* PBXTextBookmark */ = F463FD9B132E36A300D48B88 /* PBXTextBookmark */;
+			F463FD9C132E36A300D48B88 /* PBXTextBookmark */ = F463FD9C132E36A300D48B88 /* PBXTextBookmark */;
+			F463FD9D132E36A300D48B88 /* PBXTextBookmark */ = F463FD9D132E36A300D48B88 /* PBXTextBookmark */;
+			F463FDA7132E373D00D48B88 /* PBXTextBookmark */ = F463FDA7132E373D00D48B88 /* PBXTextBookmark */;
+		};
+		sourceControlManager = F463FC71132E353100D48B88 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	D2AAC07D0554694100DB518D /* CollideIOS */ = {
+		activeExec = 0;
+	};
+	F463FC71132E353100D48B88 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	F463FC72132E353100D48B88 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	F463FC7A132E355C00D48B88 /* aabbtree_aabb.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1081, 2444}}";
+			sepNavSelRange = "{847, 0}";
+			sepNavVisRange = "{0, 906}";
+		};
+	};
+	F463FC82132E355C00D48B88 /* aabbtreeaabb_builder.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {790, 4290}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{270, 842}";
+		};
+	};
+	F463FC83132E355C00D48B88 /* aabbtreeaabb_builder.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {790, 728}}";
+			sepNavSelRange = "{403, 0}";
+			sepNavVisRange = "{0, 998}";
+		};
+	};
+	F463FC85132E355C00D48B88 /* aabbtreepoly_builder.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {790, 5252}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1021}";
+		};
+	};
+	F463FC8D132E355C00D48B88 /* dataio.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1081, 5980}}";
+			sepNavSelRange = "{4354, 0}";
+			sepNavVisRange = "{4125, 320}";
+		};
+	};
+	F463FCA6132E355C00D48B88 /* intr_spheretri.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1081, 6422}}";
+			sepNavSelRange = "{8368, 0}";
+			sepNavVisRange = "{8091, 532}";
+		};
+	};
+	F463FD9A132E36A300D48B88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F463FC7A132E355C00D48B88 /* aabbtree_aabb.cpp */;
+		name = "aabbtree_aabb.cpp: 22";
+		rLen = 0;
+		rLoc = 847;
+		rType = 0;
+		vrLen = 649;
+		vrLoc = 585;
+	};
+	F463FD9B132E36A300D48B88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F463FC82132E355C00D48B88 /* aabbtreeaabb_builder.cpp */;
+		name = "aabbtreeaabb_builder.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 842;
+		vrLoc = 270;
+	};
+	F463FD9C132E36A300D48B88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F463FC85132E355C00D48B88 /* aabbtreepoly_builder.cpp */;
+		name = "aabbtreepoly_builder.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1021;
+		vrLoc = 0;
+	};
+	F463FD9D132E36A300D48B88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F463FC83132E355C00D48B88 /* aabbtreeaabb_builder.h */;
+		name = "aabbtreeaabb_builder.h: 10";
+		rLen = 0;
+		rLoc = 403;
+		rType = 0;
+		vrLen = 998;
+		vrLoc = 0;
+	};
+	F463FDA7132E373D00D48B88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = F463FC83132E355C00D48B88 /* aabbtreeaabb_builder.h */;
+		name = "aabbtreeaabb_builder.h: 10";
+		rLen = 0;
+		rLoc = 403;
+		rType = 0;
+		vrLen = 998;
+		vrLoc = 0;
+	};
+}

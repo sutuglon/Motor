@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* CollideIOS_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* CollideIOS_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		F463FCBF132E355C00D48B88 /* aabbtree_aabb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC7A132E355C00D48B88 /* aabbtree_aabb.cpp */; };
+		F463FCC0132E355C00D48B88 /* aabbtree_aabb.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC7B132E355C00D48B88 /* aabbtree_aabb.h */; };
+		F463FCC1132E355C00D48B88 /* aabbtree_poly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC7C132E355C00D48B88 /* aabbtree_poly.cpp */; };
+		F463FCC2132E355C00D48B88 /* aabbtree_poly.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC7D132E355C00D48B88 /* aabbtree_poly.h */; };
+		F463FCC3132E355C00D48B88 /* aabbtree_sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC7E132E355C00D48B88 /* aabbtree_sphere.cpp */; };
+		F463FCC4132E355C00D48B88 /* aabbtree_sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC7F132E355C00D48B88 /* aabbtree_sphere.h */; };
+		F463FCC5132E355C00D48B88 /* aabbtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC80132E355C00D48B88 /* aabbtree.cpp */; };
+		F463FCC6132E355C00D48B88 /* aabbtree.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC81132E355C00D48B88 /* aabbtree.h */; };
+		F463FCC7132E355C00D48B88 /* aabbtreeaabb_builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC82132E355C00D48B88 /* aabbtreeaabb_builder.cpp */; };
+		F463FCC8132E355C00D48B88 /* aabbtreeaabb_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC83132E355C00D48B88 /* aabbtreeaabb_builder.h */; };
+		F463FCCA132E355C00D48B88 /* aabbtreepoly_builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC85132E355C00D48B88 /* aabbtreepoly_builder.cpp */; };
+		F463FCCB132E355C00D48B88 /* aabbtreepoly_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC86132E355C00D48B88 /* aabbtreepoly_builder.h */; };
+		F463FCCD132E355C00D48B88 /* aabbtreesphere_builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC88132E355C00D48B88 /* aabbtreesphere_builder.cpp */; };
+		F463FCCE132E355C00D48B88 /* aabbtreesphere_builder.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC89132E355C00D48B88 /* aabbtreesphere_builder.h */; };
+		F463FCD0132E355C00D48B88 /* box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC8B132E355C00D48B88 /* box.cpp */; };
+		F463FCD1132E355C00D48B88 /* box.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC8C132E355C00D48B88 /* box.h */; };
+		F463FCD2132E355C00D48B88 /* dataio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC8D132E355C00D48B88 /* dataio.cpp */; };
+		F463FCD3132E355C00D48B88 /* dataio.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC8E132E355C00D48B88 /* dataio.h */; };
+		F463FCD5132E355C00D48B88 /* dist_pointbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC90132E355C00D48B88 /* dist_pointbox.cpp */; };
+		F463FCD6132E355C00D48B88 /* dist_pointbox.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC91132E355C00D48B88 /* dist_pointbox.h */; };
+		F463FCD7132E355C00D48B88 /* dist_pointline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC92132E355C00D48B88 /* dist_pointline.cpp */; };
+		F463FCD8132E355C00D48B88 /* dist_pointline.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC93132E355C00D48B88 /* dist_pointline.h */; };
+		F463FCD9132E355C00D48B88 /* ellipsoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC94132E355C00D48B88 /* ellipsoid.cpp */; };
+		F463FCDA132E355C00D48B88 /* ellipsoid.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC95132E355C00D48B88 /* ellipsoid.h */; };
+		F463FCDB132E355C00D48B88 /* frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC96132E355C00D48B88 /* frustum.cpp */; };
+		F463FCDC132E355C00D48B88 /* frustum.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC97132E355C00D48B88 /* frustum.h */; };
+		F463FCDD132E355C00D48B88 /* intr_boxbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC98132E355C00D48B88 /* intr_boxbox.cpp */; };
+		F463FCDE132E355C00D48B88 /* intr_boxbox.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC99132E355C00D48B88 /* intr_boxbox.h */; };
+		F463FCDF132E355C00D48B88 /* intr_frustumsphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC9A132E355C00D48B88 /* intr_frustumsphere.cpp */; };
+		F463FCE0132E355C00D48B88 /* intr_frustumsphere.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC9B132E355C00D48B88 /* intr_frustumsphere.h */; };
+		F463FCE1132E355C00D48B88 /* intr_linebox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC9C132E355C00D48B88 /* intr_linebox.cpp */; };
+		F463FCE2132E355C00D48B88 /* intr_linebox.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC9D132E355C00D48B88 /* intr_linebox.h */; };
+		F463FCE3132E355C00D48B88 /* intr_lineline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FC9E132E355C00D48B88 /* intr_lineline.cpp */; };
+		F463FCE4132E355C00D48B88 /* intr_lineline.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FC9F132E355C00D48B88 /* intr_lineline.h */; };
+		F463FCE5132E355C00D48B88 /* intr_segmenttri.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCA0132E355C00D48B88 /* intr_segmenttri.cpp */; };
+		F463FCE6132E355C00D48B88 /* intr_segmenttri.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCA1132E355C00D48B88 /* intr_segmenttri.h */; };
+		F463FCE7132E355C00D48B88 /* intr_spherebox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCA2132E355C00D48B88 /* intr_spherebox.cpp */; };
+		F463FCE8132E355C00D48B88 /* intr_spherebox.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCA3132E355C00D48B88 /* intr_spherebox.h */; };
+		F463FCE9132E355C00D48B88 /* intr_sphereline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCA4132E355C00D48B88 /* intr_sphereline.cpp */; };
+		F463FCEA132E355C00D48B88 /* intr_sphereline.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCA5132E355C00D48B88 /* intr_sphereline.h */; };
+		F463FCEB132E355C00D48B88 /* intr_spheretri.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCA6132E355C00D48B88 /* intr_spheretri.cpp */; };
+		F463FCEC132E355C00D48B88 /* intr_spheretri.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCA7132E355C00D48B88 /* intr_spheretri.h */; };
+		F463FCED132E355C00D48B88 /* intr_tribox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCA8132E355C00D48B88 /* intr_tribox.cpp */; };
+		F463FCEE132E355C00D48B88 /* intr_tribox.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCA9132E355C00D48B88 /* intr_tribox.h */; };
+		F463FCEF132E355C00D48B88 /* intr_tripoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCAA132E355C00D48B88 /* intr_tripoint.cpp */; };
+		F463FCF0132E355C00D48B88 /* intr_tripoint.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCAB132E355C00D48B88 /* intr_tripoint.h */; };
+		F463FCF1132E355C00D48B88 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCAC132E355C00D48B88 /* matrix.cpp */; };
+		F463FCF2132E355C00D48B88 /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCAD132E355C00D48B88 /* matrix.h */; };
+		F463FCF3132E355C00D48B88 /* monitor.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCAE132E355C00D48B88 /* monitor.h */; };
+		F463FCF4132E355C00D48B88 /* obb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCAF132E355C00D48B88 /* obb.cpp */; };
+		F463FCF5132E355C00D48B88 /* obb.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCB0132E355C00D48B88 /* obb.h */; };
+		F463FCF6132E355C00D48B88 /* ozcollide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCB1132E355C00D48B88 /* ozcollide.cpp */; };
+		F463FCF7132E355C00D48B88 /* ozcollide.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCB2132E355C00D48B88 /* ozcollide.h */; };
+		F463FCF8132E355C00D48B88 /* plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCB3132E355C00D48B88 /* plane.cpp */; };
+		F463FCF9132E355C00D48B88 /* plane.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCB4132E355C00D48B88 /* plane.h */; };
+		F463FCFA132E355C00D48B88 /* polygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCB5132E355C00D48B88 /* polygon.cpp */; };
+		F463FCFB132E355C00D48B88 /* polygon.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCB6132E355C00D48B88 /* polygon.h */; };
+		F463FCFC132E355C00D48B88 /* sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCB7132E355C00D48B88 /* sphere.cpp */; };
+		F463FCFD132E355C00D48B88 /* sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCB8132E355C00D48B88 /* sphere.h */; };
+		F463FCFE132E355C00D48B88 /* vec2f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCB9132E355C00D48B88 /* vec2f.cpp */; };
+		F463FCFF132E355C00D48B88 /* vec2f.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCBA132E355C00D48B88 /* vec2f.h */; };
+		F463FD00132E355C00D48B88 /* vec3f.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCBB132E355C00D48B88 /* vec3f.cpp */; };
+		F463FD01132E355C00D48B88 /* vec3f.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCBC132E355C00D48B88 /* vec3f.h */; };
+		F463FD02132E355C00D48B88 /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F463FCBD132E355C00D48B88 /* vector.cpp */; };
+		F463FD03132E355C00D48B88 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = F463FCBE132E355C00D48B88 /* vector.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* CollideIOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollideIOS_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libCollideIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCollideIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F463FC7A132E355C00D48B88 /* aabbtree_aabb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aabbtree_aabb.cpp; path = ozcollide/aabbtree_aabb.cpp; sourceTree = "<group>"; };
+		F463FC7B132E355C00D48B88 /* aabbtree_aabb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aabbtree_aabb.h; path = ozcollide/aabbtree_aabb.h; sourceTree = "<group>"; };
+		F463FC7C132E355C00D48B88 /* aabbtree_poly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aabbtree_poly.cpp; path = ozcollide/aabbtree_poly.cpp; sourceTree = "<group>"; };
+		F463FC7D132E355C00D48B88 /* aabbtree_poly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aabbtree_poly.h; path = ozcollide/aabbtree_poly.h; sourceTree = "<group>"; };
+		F463FC7E132E355C00D48B88 /* aabbtree_sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aabbtree_sphere.cpp; path = ozcollide/aabbtree_sphere.cpp; sourceTree = "<group>"; };
+		F463FC7F132E355C00D48B88 /* aabbtree_sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aabbtree_sphere.h; path = ozcollide/aabbtree_sphere.h; sourceTree = "<group>"; };
+		F463FC80132E355C00D48B88 /* aabbtree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aabbtree.cpp; path = ozcollide/aabbtree.cpp; sourceTree = "<group>"; };
+		F463FC81132E355C00D48B88 /* aabbtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aabbtree.h; path = ozcollide/aabbtree.h; sourceTree = "<group>"; };
+		F463FC82132E355C00D48B88 /* aabbtreeaabb_builder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aabbtreeaabb_builder.cpp; path = ozcollide/aabbtreeaabb_builder.cpp; sourceTree = "<group>"; };
+		F463FC83132E355C00D48B88 /* aabbtreeaabb_builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aabbtreeaabb_builder.h; path = ozcollide/aabbtreeaabb_builder.h; sourceTree = "<group>"; };
+		F463FC85132E355C00D48B88 /* aabbtreepoly_builder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aabbtreepoly_builder.cpp; path = ozcollide/aabbtreepoly_builder.cpp; sourceTree = "<group>"; };
+		F463FC86132E355C00D48B88 /* aabbtreepoly_builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aabbtreepoly_builder.h; path = ozcollide/aabbtreepoly_builder.h; sourceTree = "<group>"; };
+		F463FC88132E355C00D48B88 /* aabbtreesphere_builder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aabbtreesphere_builder.cpp; path = ozcollide/aabbtreesphere_builder.cpp; sourceTree = "<group>"; };
+		F463FC89132E355C00D48B88 /* aabbtreesphere_builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aabbtreesphere_builder.h; path = ozcollide/aabbtreesphere_builder.h; sourceTree = "<group>"; };
+		F463FC8B132E355C00D48B88 /* box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = box.cpp; path = ozcollide/box.cpp; sourceTree = "<group>"; };
+		F463FC8C132E355C00D48B88 /* box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = box.h; path = ozcollide/box.h; sourceTree = "<group>"; };
+		F463FC8D132E355C00D48B88 /* dataio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dataio.cpp; path = ozcollide/dataio.cpp; sourceTree = "<group>"; };
+		F463FC8E132E355C00D48B88 /* dataio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dataio.h; path = ozcollide/dataio.h; sourceTree = "<group>"; };
+		F463FC90132E355C00D48B88 /* dist_pointbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dist_pointbox.cpp; path = ozcollide/dist_pointbox.cpp; sourceTree = "<group>"; };
+		F463FC91132E355C00D48B88 /* dist_pointbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dist_pointbox.h; path = ozcollide/dist_pointbox.h; sourceTree = "<group>"; };
+		F463FC92132E355C00D48B88 /* dist_pointline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dist_pointline.cpp; path = ozcollide/dist_pointline.cpp; sourceTree = "<group>"; };
+		F463FC93132E355C00D48B88 /* dist_pointline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dist_pointline.h; path = ozcollide/dist_pointline.h; sourceTree = "<group>"; };
+		F463FC94132E355C00D48B88 /* ellipsoid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ellipsoid.cpp; path = ozcollide/ellipsoid.cpp; sourceTree = "<group>"; };
+		F463FC95132E355C00D48B88 /* ellipsoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ellipsoid.h; path = ozcollide/ellipsoid.h; sourceTree = "<group>"; };
+		F463FC96132E355C00D48B88 /* frustum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = frustum.cpp; path = ozcollide/frustum.cpp; sourceTree = "<group>"; };
+		F463FC97132E355C00D48B88 /* frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = frustum.h; path = ozcollide/frustum.h; sourceTree = "<group>"; };
+		F463FC98132E355C00D48B88 /* intr_boxbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_boxbox.cpp; path = ozcollide/intr_boxbox.cpp; sourceTree = "<group>"; };
+		F463FC99132E355C00D48B88 /* intr_boxbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_boxbox.h; path = ozcollide/intr_boxbox.h; sourceTree = "<group>"; };
+		F463FC9A132E355C00D48B88 /* intr_frustumsphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_frustumsphere.cpp; path = ozcollide/intr_frustumsphere.cpp; sourceTree = "<group>"; };
+		F463FC9B132E355C00D48B88 /* intr_frustumsphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_frustumsphere.h; path = ozcollide/intr_frustumsphere.h; sourceTree = "<group>"; };
+		F463FC9C132E355C00D48B88 /* intr_linebox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_linebox.cpp; path = ozcollide/intr_linebox.cpp; sourceTree = "<group>"; };
+		F463FC9D132E355C00D48B88 /* intr_linebox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_linebox.h; path = ozcollide/intr_linebox.h; sourceTree = "<group>"; };
+		F463FC9E132E355C00D48B88 /* intr_lineline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_lineline.cpp; path = ozcollide/intr_lineline.cpp; sourceTree = "<group>"; };
+		F463FC9F132E355C00D48B88 /* intr_lineline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_lineline.h; path = ozcollide/intr_lineline.h; sourceTree = "<group>"; };
+		F463FCA0132E355C00D48B88 /* intr_segmenttri.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_segmenttri.cpp; path = ozcollide/intr_segmenttri.cpp; sourceTree = "<group>"; };
+		F463FCA1132E355C00D48B88 /* intr_segmenttri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_segmenttri.h; path = ozcollide/intr_segmenttri.h; sourceTree = "<group>"; };
+		F463FCA2132E355C00D48B88 /* intr_spherebox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_spherebox.cpp; path = ozcollide/intr_spherebox.cpp; sourceTree = "<group>"; };
+		F463FCA3132E355C00D48B88 /* intr_spherebox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_spherebox.h; path = ozcollide/intr_spherebox.h; sourceTree = "<group>"; };
+		F463FCA4132E355C00D48B88 /* intr_sphereline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_sphereline.cpp; path = ozcollide/intr_sphereline.cpp; sourceTree = "<group>"; };
+		F463FCA5132E355C00D48B88 /* intr_sphereline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_sphereline.h; path = ozcollide/intr_sphereline.h; sourceTree = "<group>"; };
+		F463FCA6132E355C00D48B88 /* intr_spheretri.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_spheretri.cpp; path = ozcollide/intr_spheretri.cpp; sourceTree = "<group>"; };
+		F463FCA7132E355C00D48B88 /* intr_spheretri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_spheretri.h; path = ozcollide/intr_spheretri.h; sourceTree = "<group>"; };
+		F463FCA8132E355C00D48B88 /* intr_tribox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_tribox.cpp; path = ozcollide/intr_tribox.cpp; sourceTree = "<group>"; };
+		F463FCA9132E355C00D48B88 /* intr_tribox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_tribox.h; path = ozcollide/intr_tribox.h; sourceTree = "<group>"; };
+		F463FCAA132E355C00D48B88 /* intr_tripoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = intr_tripoint.cpp; path = ozcollide/intr_tripoint.cpp; sourceTree = "<group>"; };
+		F463FCAB132E355C00D48B88 /* intr_tripoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intr_tripoint.h; path = ozcollide/intr_tripoint.h; sourceTree = "<group>"; };
+		F463FCAC132E355C00D48B88 /* matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = matrix.cpp; path = ozcollide/matrix.cpp; sourceTree = "<group>"; };
+		F463FCAD132E355C00D48B88 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = ozcollide/matrix.h; sourceTree = "<group>"; };
+		F463FCAE132E355C00D48B88 /* monitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = monitor.h; path = ozcollide/monitor.h; sourceTree = "<group>"; };
+		F463FCAF132E355C00D48B88 /* obb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = obb.cpp; path = ozcollide/obb.cpp; sourceTree = "<group>"; };
+		F463FCB0132E355C00D48B88 /* obb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = obb.h; path = ozcollide/obb.h; sourceTree = "<group>"; };
+		F463FCB1132E355C00D48B88 /* ozcollide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ozcollide.cpp; path = ozcollide/ozcollide.cpp; sourceTree = "<group>"; };
+		F463FCB2132E355C00D48B88 /* ozcollide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ozcollide.h; path = ozcollide/ozcollide.h; sourceTree = "<group>"; };
+		F463FCB3132E355C00D48B88 /* plane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = plane.cpp; path = ozcollide/plane.cpp; sourceTree = "<group>"; };
+		F463FCB4132E355C00D48B88 /* plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = plane.h; path = ozcollide/plane.h; sourceTree = "<group>"; };
+		F463FCB5132E355C00D48B88 /* polygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = polygon.cpp; path = ozcollide/polygon.cpp; sourceTree = "<group>"; };
+		F463FCB6132E355C00D48B88 /* polygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = polygon.h; path = ozcollide/polygon.h; sourceTree = "<group>"; };
+		F463FCB7132E355C00D48B88 /* sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sphere.cpp; path = ozcollide/sphere.cpp; sourceTree = "<group>"; };
+		F463FCB8132E355C00D48B88 /* sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sphere.h; path = ozcollide/sphere.h; sourceTree = "<group>"; };
+		F463FCB9132E355C00D48B88 /* vec2f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vec2f.cpp; path = ozcollide/vec2f.cpp; sourceTree = "<group>"; };
+		F463FCBA132E355C00D48B88 /* vec2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vec2f.h; path = ozcollide/vec2f.h; sourceTree = "<group>"; };
+		F463FCBB132E355C00D48B88 /* vec3f.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vec3f.cpp; path = ozcollide/vec3f.cpp; sourceTree = "<group>"; };
+		F463FCBC132E355C00D48B88 /* vec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vec3f.h; path = ozcollide/vec3f.h; sourceTree = "<group>"; };
+		F463FCBD132E355C00D48B88 /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vector.cpp; path = ozcollide/vector.cpp; sourceTree = "<group>"; };
+		F463FCBE132E355C00D48B88 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vector.h; path = ozcollide/vector.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libCollideIOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* CollideIOS */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = CollideIOS;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F463FD04132E356100D48B88 /* ozcollide */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* CollideIOS_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F463FD04132E356100D48B88 /* ozcollide */ = {
+			isa = PBXGroup;
+			children = (
+				F463FC7A132E355C00D48B88 /* aabbtree_aabb.cpp */,
+				F463FC7B132E355C00D48B88 /* aabbtree_aabb.h */,
+				F463FC7C132E355C00D48B88 /* aabbtree_poly.cpp */,
+				F463FC7D132E355C00D48B88 /* aabbtree_poly.h */,
+				F463FC7E132E355C00D48B88 /* aabbtree_sphere.cpp */,
+				F463FC7F132E355C00D48B88 /* aabbtree_sphere.h */,
+				F463FC80132E355C00D48B88 /* aabbtree.cpp */,
+				F463FC81132E355C00D48B88 /* aabbtree.h */,
+				F463FC82132E355C00D48B88 /* aabbtreeaabb_builder.cpp */,
+				F463FC83132E355C00D48B88 /* aabbtreeaabb_builder.h */,
+				F463FC85132E355C00D48B88 /* aabbtreepoly_builder.cpp */,
+				F463FC86132E355C00D48B88 /* aabbtreepoly_builder.h */,
+				F463FC88132E355C00D48B88 /* aabbtreesphere_builder.cpp */,
+				F463FC89132E355C00D48B88 /* aabbtreesphere_builder.h */,
+				F463FC8B132E355C00D48B88 /* box.cpp */,
+				F463FC8C132E355C00D48B88 /* box.h */,
+				F463FC8D132E355C00D48B88 /* dataio.cpp */,
+				F463FC8E132E355C00D48B88 /* dataio.h */,
+				F463FC90132E355C00D48B88 /* dist_pointbox.cpp */,
+				F463FC91132E355C00D48B88 /* dist_pointbox.h */,
+				F463FC92132E355C00D48B88 /* dist_pointline.cpp */,
+				F463FC93132E355C00D48B88 /* dist_pointline.h */,
+				F463FC94132E355C00D48B88 /* ellipsoid.cpp */,
+				F463FC95132E355C00D48B88 /* ellipsoid.h */,
+				F463FC96132E355C00D48B88 /* frustum.cpp */,
+				F463FC97132E355C00D48B88 /* frustum.h */,
+				F463FC98132E355C00D48B88 /* intr_boxbox.cpp */,
+				F463FC99132E355C00D48B88 /* intr_boxbox.h */,
+				F463FC9A132E355C00D48B88 /* intr_frustumsphere.cpp */,
+				F463FC9B132E355C00D48B88 /* intr_frustumsphere.h */,
+				F463FC9C132E355C00D48B88 /* intr_linebox.cpp */,
+				F463FC9D132E355C00D48B88 /* intr_linebox.h */,
+				F463FC9E132E355C00D48B88 /* intr_lineline.cpp */,
+				F463FC9F132E355C00D48B88 /* intr_lineline.h */,
+				F463FCA0132E355C00D48B88 /* intr_segmenttri.cpp */,
+				F463FCA1132E355C00D48B88 /* intr_segmenttri.h */,
+				F463FCA2132E355C00D48B88 /* intr_spherebox.cpp */,
+				F463FCA3132E355C00D48B88 /* intr_spherebox.h */,
+				F463FCA4132E355C00D48B88 /* intr_sphereline.cpp */,
+				F463FCA5132E355C00D48B88 /* intr_sphereline.h */,
+				F463FCA6132E355C00D48B88 /* intr_spheretri.cpp */,
+				F463FCA7132E355C00D48B88 /* intr_spheretri.h */,
+				F463FCA8132E355C00D48B88 /* intr_tribox.cpp */,
+				F463FCA9132E355C00D48B88 /* intr_tribox.h */,
+				F463FCAA132E355C00D48B88 /* intr_tripoint.cpp */,
+				F463FCAB132E355C00D48B88 /* intr_tripoint.h */,
+				F463FCAC132E355C00D48B88 /* matrix.cpp */,
+				F463FCAD132E355C00D48B88 /* matrix.h */,
+				F463FCAE132E355C00D48B88 /* monitor.h */,
+				F463FCAF132E355C00D48B88 /* obb.cpp */,
+				F463FCB0132E355C00D48B88 /* obb.h */,
+				F463FCB1132E355C00D48B88 /* ozcollide.cpp */,
+				F463FCB2132E355C00D48B88 /* ozcollide.h */,
+				F463FCB3132E355C00D48B88 /* plane.cpp */,
+				F463FCB4132E355C00D48B88 /* plane.h */,
+				F463FCB5132E355C00D48B88 /* polygon.cpp */,
+				F463FCB6132E355C00D48B88 /* polygon.h */,
+				F463FCB7132E355C00D48B88 /* sphere.cpp */,
+				F463FCB8132E355C00D48B88 /* sphere.h */,
+				F463FCB9132E355C00D48B88 /* vec2f.cpp */,
+				F463FCBA132E355C00D48B88 /* vec2f.h */,
+				F463FCBB132E355C00D48B88 /* vec3f.cpp */,
+				F463FCBC132E355C00D48B88 /* vec3f.h */,
+				F463FCBD132E355C00D48B88 /* vector.cpp */,
+				F463FCBE132E355C00D48B88 /* vector.h */,
+			);
+			name = ozcollide;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* CollideIOS_Prefix.pch in Headers */,
+				F463FCC0132E355C00D48B88 /* aabbtree_aabb.h in Headers */,
+				F463FCC2132E355C00D48B88 /* aabbtree_poly.h in Headers */,
+				F463FCC4132E355C00D48B88 /* aabbtree_sphere.h in Headers */,
+				F463FCC6132E355C00D48B88 /* aabbtree.h in Headers */,
+				F463FCC8132E355C00D48B88 /* aabbtreeaabb_builder.h in Headers */,
+				F463FCCB132E355C00D48B88 /* aabbtreepoly_builder.h in Headers */,
+				F463FCCE132E355C00D48B88 /* aabbtreesphere_builder.h in Headers */,
+				F463FCD1132E355C00D48B88 /* box.h in Headers */,
+				F463FCD3132E355C00D48B88 /* dataio.h in Headers */,
+				F463FCD6132E355C00D48B88 /* dist_pointbox.h in Headers */,
+				F463FCD8132E355C00D48B88 /* dist_pointline.h in Headers */,
+				F463FCDA132E355C00D48B88 /* ellipsoid.h in Headers */,
+				F463FCDC132E355C00D48B88 /* frustum.h in Headers */,
+				F463FCDE132E355C00D48B88 /* intr_boxbox.h in Headers */,
+				F463FCE0132E355C00D48B88 /* intr_frustumsphere.h in Headers */,
+				F463FCE2132E355C00D48B88 /* intr_linebox.h in Headers */,
+				F463FCE4132E355C00D48B88 /* intr_lineline.h in Headers */,
+				F463FCE6132E355C00D48B88 /* intr_segmenttri.h in Headers */,
+				F463FCE8132E355C00D48B88 /* intr_spherebox.h in Headers */,
+				F463FCEA132E355C00D48B88 /* intr_sphereline.h in Headers */,
+				F463FCEC132E355C00D48B88 /* intr_spheretri.h in Headers */,
+				F463FCEE132E355C00D48B88 /* intr_tribox.h in Headers */,
+				F463FCF0132E355C00D48B88 /* intr_tripoint.h in Headers */,
+				F463FCF2132E355C00D48B88 /* matrix.h in Headers */,
+				F463FCF3132E355C00D48B88 /* monitor.h in Headers */,
+				F463FCF5132E355C00D48B88 /* obb.h in Headers */,
+				F463FCF7132E355C00D48B88 /* ozcollide.h in Headers */,
+				F463FCF9132E355C00D48B88 /* plane.h in Headers */,
+				F463FCFB132E355C00D48B88 /* polygon.h in Headers */,
+				F463FCFD132E355C00D48B88 /* sphere.h in Headers */,
+				F463FCFF132E355C00D48B88 /* vec2f.h in Headers */,
+				F463FD01132E355C00D48B88 /* vec3f.h in Headers */,
+				F463FD03132E355C00D48B88 /* vector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* CollideIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CollideIOS" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollideIOS;
+			productName = CollideIOS;
+			productReference = D2AAC07E0554694100DB518D /* libCollideIOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CollideIOS" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* CollideIOS */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* CollideIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F463FCBF132E355C00D48B88 /* aabbtree_aabb.cpp in Sources */,
+				F463FCC1132E355C00D48B88 /* aabbtree_poly.cpp in Sources */,
+				F463FCC3132E355C00D48B88 /* aabbtree_sphere.cpp in Sources */,
+				F463FCC5132E355C00D48B88 /* aabbtree.cpp in Sources */,
+				F463FCC7132E355C00D48B88 /* aabbtreeaabb_builder.cpp in Sources */,
+				F463FCCA132E355C00D48B88 /* aabbtreepoly_builder.cpp in Sources */,
+				F463FCCD132E355C00D48B88 /* aabbtreesphere_builder.cpp in Sources */,
+				F463FCD0132E355C00D48B88 /* box.cpp in Sources */,
+				F463FCD2132E355C00D48B88 /* dataio.cpp in Sources */,
+				F463FCD5132E355C00D48B88 /* dist_pointbox.cpp in Sources */,
+				F463FCD7132E355C00D48B88 /* dist_pointline.cpp in Sources */,
+				F463FCD9132E355C00D48B88 /* ellipsoid.cpp in Sources */,
+				F463FCDB132E355C00D48B88 /* frustum.cpp in Sources */,
+				F463FCDD132E355C00D48B88 /* intr_boxbox.cpp in Sources */,
+				F463FCDF132E355C00D48B88 /* intr_frustumsphere.cpp in Sources */,
+				F463FCE1132E355C00D48B88 /* intr_linebox.cpp in Sources */,
+				F463FCE3132E355C00D48B88 /* intr_lineline.cpp in Sources */,
+				F463FCE5132E355C00D48B88 /* intr_segmenttri.cpp in Sources */,
+				F463FCE7132E355C00D48B88 /* intr_spherebox.cpp in Sources */,
+				F463FCE9132E355C00D48B88 /* intr_sphereline.cpp in Sources */,
+				F463FCEB132E355C00D48B88 /* intr_spheretri.cpp in Sources */,
+				F463FCED132E355C00D48B88 /* intr_tribox.cpp in Sources */,
+				F463FCEF132E355C00D48B88 /* intr_tripoint.cpp in Sources */,
+				F463FCF1132E355C00D48B88 /* matrix.cpp in Sources */,
+				F463FCF4132E355C00D48B88 /* obb.cpp in Sources */,
+				F463FCF6132E355C00D48B88 /* ozcollide.cpp in Sources */,
+				F463FCF8132E355C00D48B88 /* plane.cpp in Sources */,
+				F463FCFA132E355C00D48B88 /* polygon.cpp in Sources */,
+				F463FCFC132E355C00D48B88 /* sphere.cpp in Sources */,
+				F463FCFE132E355C00D48B88 /* vec2f.cpp in Sources */,
+				F463FD00132E355C00D48B88 /* vec3f.cpp in Sources */,
+				F463FD02132E355C00D48B88 /* vector.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/CollideIOS.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CollideIOS_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CollideIOS;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				DSTROOT = /tmp/CollideIOS.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CollideIOS_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CollideIOS;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = .;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = .;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "CollideIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "CollideIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

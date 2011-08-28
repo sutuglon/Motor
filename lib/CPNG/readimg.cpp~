@@ -1,0 +1,134 @@
+/*
+ *  readimg.cpp
+ *  PNG
+ *
+ *  Created by Chema on 3/4/10.
+ *  Copyright 2010 __MyCompanyName__. All rights reserved.
+ *
+ */
+
+#include <iostream>
+#include <algorithm>
+#include <cctype>
+#include "readpng.h"
+#include "readbmp.h"
+#include "readimg.h"
+
+namespace  {
+    std::string getExtension(const std::string& file) {
+        return file.substr(file.length()-3);
+    }
+    void toUpper(std::string& str) {
+        std::transform(str.begin(), str.end(), str.begin(), (int(*)(int)) toupper);
+    }
+}
+
+const unsigned char* const Image::getBits() const {return data_;}
+void Image::setBits(const unsigned char* bits) const {memcpy(data_, bits, width_*height_*channels_);}
+unsigned Image::getWidth() const {return width_;}
+unsigned Image::getHeight() const {return height_;}
+unsigned Image::getChannels() const {return channels_;}
+
+Image::~Image() {
+    delete data_;
+}
+
+bool Image::load(const std::string& file) {
+    bool ret=false;
+
+    std::string type =getExtension(file);
+    toUpper(type);
+    if (type=="PNG") {
+        FILE* pngFile = fopen(file.c_str(), "rb");
+        if (!pngFile) { return ret;}
+        
+        readpng_init(pngFile, &width_, &height_);
+
+        unsigned rowBytes;
+        readpng_get_image( &data_, &channels_, &rowBytes);
+        if (!data_) { return ret; }
+
+        readpng_cleanup(FALSE);
+        fclose(pngFile);
+    }
+    else if (type=="BMP") {
+        BITMAPINFO *BitmapInfo=0;
+        unsigned char* datargb = LoadDIBitmap(file.c_str(), &BitmapInfo);
+        if (!BitmapInfo) {
+            return ret;
+        }
+        width_=BitmapInfo->bmiHeader.biWidth;
+        height_=BitmapInfo->bmiHeader.biHeight;
+        channels_=4;
+        
+        if (BitmapInfo->bmiHeader.biBitCount>>3!=3) {return ret;}
+        
+        unsigned char* pDataRGBA=data_=(unsigned char *)malloc(width_*height_*channels_);
+        int length = (width_ * 3 + 3) & ~3; // four byte aligned GBR packed rows
+        for (int y = 0; y < height_; y ++) {
+            unsigned char* pDataRGB = datargb + y*length;
+            unsigned char* pDataRGBEnd = pDataRGB + width_*3;
+            while (pDataRGB!=pDataRGBEnd) {
+                *pDataRGBA++=*(pDataRGB+2);
+                *pDataRGBA++=*(pDataRGB+1);
+                *pDataRGBA++=*(pDataRGB);
+                *pDataRGBA++=255;
+                pDataRGB+=3;
+            }
+        }
+        free(BitmapInfo);
+        free(datargb);
+    }
+    return ret=true;
+}
+
+void write(char* filePath)
+{
+    bool ret=false;
+
+    std::string type =getExtension(file);
+    toUpper(type);
+    if (type=="PNG") {
+        FILE *fp = fopen(filePath, "wb");
+        if (!fp) std::cerr<<"readimg::PNG File %s could not be opened for writing"<< filePath;
+
+        if (!png_ptr = png_create_write_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL)) 
+            std::cerr<<"readimg::PNG png_create_write_struct failed"
+
+        if (!info_ptr = png_create_info_struct(png_ptr))
+            std::cerr<<"readimg::PNG png_create_info_struct failed";
+
+        if (setjmp(png_jmpbuf(png_ptr))) 
+            std::cerr<<"readimg::PNG Error during init_io";
+
+        png_init_io(png_ptr, fp);
+
+        if (setjmp(png_jmpbuf(png_ptr))) 
+            std::cerr<<"readimg::PNG Error during writing header";
+
+        png_set_IHDR(png_ptr, info_ptr, width, height,
+                     bit_depth, color_type, PNG_INTERLACE_NONE,
+                     PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
+
+        png_write_info(png_ptr, info_ptr);
+
+        if (setjmp(png_jmpbuf(png_ptr)))
+                std::cerr<<"readimg::PNG Error during writing bytes";
+
+        png_write_image(png_ptr, row_pointers);
+
+        if (setjmp(png_jmpbuf(png_ptr)))
+                std::cerr<<"readimg::PNG Error during end of write";
+
+        png_write_end(png_ptr, NULL);
+
+        for (y=0; y<height; y++)
+                free(row_pointers[y]);
+        free(row_pointers);
+
+        fclose(fp);
+    }
+}
+//int Image::write(const std::string& file) const {
+//    //TODO ?
+//}

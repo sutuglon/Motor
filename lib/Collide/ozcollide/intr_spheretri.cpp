@@ -367,7 +367,7 @@ bool testIntersectionTriSphere(const Vec3f *_triPts[3],
 	if (_triNormal.dot(nvelo) >= 0)
 		return false;
 
-	float minDist = FLT_MAX;
+	//float minDist = FLT_MAX;
 	Vec3f reaction;
 	int col = -1;
 	_distTravel = FLT_MAX;
@@ -446,7 +446,7 @@ bool testIntersectionTriSphere(const Vec3f *_triPts[3],
 		Vec3f pt0 = plane.project(_sphere.center); // center of the sphere slice (a circle)
 
 		Vec3f onLine;
-		float h = distancePointToLine(pt0, edge0, edge1, &onLine);
+		/*float h =*/ distancePointToLine(pt0, edge0, edge1, &onLine);
 		Vec3f v = onLine - pt0;
 		v.normalize();
 		Vec3f pt1 = v * r + pt0; // point on the sphere that will maybe collide with the edge

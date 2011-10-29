@@ -55,7 +55,7 @@
 
 void iOSLoadImage(const char* filepathname, unsigned char*& data, unsigned& width, unsigned& height, unsigned&channels, int flipVertical)
 {
-	NSString *filepathString = [[NSString alloc] initWithCString:filepathname];
+	NSString *filepathString = [[NSString alloc] initWithCString:filepathname encoding:NSASCIIStringEncoding];
 	
 //#if ESSENTIAL_GL_PRACTICES_IPHONE_OS
 	UIImage* imageClass = [[UIImage alloc] initWithContentsOfFile:filepathString];

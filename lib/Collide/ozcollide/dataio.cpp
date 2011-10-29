@@ -201,28 +201,28 @@ int DataIn::readStrZ(char *_dest)
 char DataIn::readByte()
 {
 	char c = 0;
-	int res = read(&c, 1); 
+	/*int res = */read(&c, 1); 
 	return c;
 }
 
 short DataIn::readWord()
 {
 	short s = 0;
-	int res = read(&s, 2);
+	/*int res = */read(&s, 2);
 	return ntohs(s);
 }
 
 int DataIn::readDword()
 {
 	int i = 0;
-	int res = read(&i, 4);
+	/*int res = */read(&i, 4);
 	return ntohl(i);
 }
 
 float DataIn::readFloat()
 {
 	float f;
-	int res = read(&f, 4);
+	/*int res = */read(&f, 4);
 
 	int a = *((int*)&f);
 	int n = ntohl(a);

@@ -38,8 +38,10 @@ void main(void){
     vec4 reflcol = textureCube( text0, normalize(refldir) );
 	vec4 texcol = texture2D (text1, lerp_uv.st);
     vec4 bumpcol = vec4(texcol.xyz,1.0);
-    
-    gl_FragColor = mix(bumpcol,reflcol,mixfactor);
+
+
+    gl_FragColor = reflcol;
+//    gl_FragColor = mix(bumpcol,reflcol,mixfactor);
     
 //    gl_FragColor = reflcol;
 

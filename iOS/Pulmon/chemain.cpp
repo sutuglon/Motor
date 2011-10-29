@@ -58,6 +58,8 @@ namespace  {
 //    Object myobj;
 //    DrawObject mydraw;
     
+    DrawSkybox drawSkybox;
+    
     GLfloat angle;
 
     // irregular objects
@@ -204,7 +206,8 @@ void DisplayHandler(void)
     drawChrono.start();
     
     
-	glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+//	glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+    glClear( GL_DEPTH_BUFFER_BIT );
   	glCullFace(GL_BACK);
 
 
@@ -218,7 +221,36 @@ void DisplayHandler(void)
     cam2w = Matrix4OrthoInverse(w2cam);
     Matrix3 cam2wRot = Matrix4GetRotation(cam2w);
     
-    bool inside = false;
+    //bool inside = false;
+    
+    // skybox 5
+    
+    glEnable(GL_DEPTH_TEST);
+    {
+        glDisable(GL_DEPTH_TEST);
+        glDisable(GL_CULL_FACE);
+        currentShader =  drawSkybox.cube_.shader_;
+        (*currentShader).bind();
+
+        
+        modelMx = drawSkybox.cube_.mx_;
+        
+        viewMx = w2cam;
+        SetCol(viewMx,3,Real3(0,0,0));
+        
+        Matrix4Mult(mvMx,viewMx, modelMx);
+        Matrix4Mult(mvpMx, projectionMx, mvMx);
+        glUniformMatrix4fv(glGetUniformLocation((*(drawSkybox.cube_.shader_)).getId(), "mvpMx"), 1, GL_FALSE, &mvpMx[0]);
+        
+        int a = 0;
+        glUniform1i(a= glGetUniformLocation((*currentShader).getId(), "text0") , 0);
+        glActiveTexture(GL_TEXTURE0);
+        
+        drawSkybox.draw();
+    
+        (*currentShader).unbind();   
+    }
+    
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -231,7 +263,7 @@ void DisplayHandler(void)
     
     // models 21
     
-    for (int i =0;i<static_cast<int>(objs.size()-1);i++)
+    for (int i =0;i<static_cast<int>(objs.size());i++)
     {
         const DrawObject& draw = drawObjs[i];
         const Object& obj = objs[i];
@@ -264,16 +296,18 @@ void DisplayHandler(void)
         glUniform1i(a= glGetUniformLocation((*currentShader).getId(), "text0") , 0);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_CUBE_MAP, draw.textId_[DrawObject::eText0]);
-        
+
+        // TODO: fix this
         glUniform1i(glGetUniformLocation((*currentShader).getId(), "text1") , 1);
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, draw.textId_[DrawObject::eText1]);
-        
+    
         glUniform1i(glGetUniformLocation((*currentShader).getId(), "text2") , 2);
         glActiveTexture(GL_TEXTURE2);
         glBindTexture(GL_TEXTURE_2D, draw.textId_[DrawObject::eText2]);
 
         glBindVertexArray(draw.vao_);
+        
         glDrawElements(GL_TRIANGLES, obj.fc_.size()*3, GL_UNSIGNED_SHORT, 0);
         (*currentShader).unbind();    
     }
@@ -285,8 +319,6 @@ void DisplayHandler(void)
 
 void Init(int backingWidth, int backingHeight) {
 
-   
-    
     // normal mapping shader setup
     normalShader.compile("normalmap");
     glBindAttribLocation(normalShader.getId(), DrawObject::eVxIndex, "_vx");
@@ -294,35 +326,16 @@ void Init(int backingWidth, int backingHeight) {
     glBindAttribLocation(normalShader.getId(), DrawObject::eTgIndex, "_tg");
     glBindAttribLocation(normalShader.getId(), DrawObject::eUvIndex, "_uv");
     normalShader.link();
+    
+    // texture shader setup
+    textureShader.compile("texture");
+    glBindAttribLocation(textureShader.getId(), DrawObject::eVxIndex, "_vx");
+    glBindAttribLocation(textureShader.getId(), DrawObject::eUvIndex, "_uv");
+    textureShader.link();
 
-
-//    // sphere shader setup
-//    sphereShader.compile("sphere");
-//    glBindAttribLocation(sphereShader.getId(), DrawObject::eVxIndex, "_vx");
-//    glBindAttribLocation(sphereShader.getId(), DrawObject::eVnIndex, "_vn");
-//    sphereShader.link();
-//    
-//    // cubemap shader setup
-//    cubemapShader.compile("cubemapping");
-//    glBindAttribLocation(cubemapShader.getId(), DrawObject::eVxIndex, "_vx");
-//    glBindAttribLocation(cubemapShader.getId(), DrawObject::eVnIndex, "_vn");
-//    cubemapShader.link();
-//    
-//    // particle shader setup
-//    particleShader.compile("particles");
-//    glBindAttribLocation(particleShader.getId(), DrawObject::eVxIndex, "_vx");
-//    particleShader.link();
-//    
-//    // irradiance shader setup
-//    irradianceShader.compile("irradiance");
-//    glBindAttribLocation(irradianceShader.getId(), DrawObject::eVxIndex, "_vx");
-//    glBindAttribLocation(irradianceShader.getId(), DrawObject::eVnIndex, "_vn");
-//    glBindAttribLocation(irradianceShader.getId(), DrawObject::eUvIndex, "_uv");
-//    irradianceShader.link();
-//
     // cubemaps
     std::vector<std::string> specCubeFiles;
-    const std::string envName = "snowfield";
+    const std::string envName = "lung_light";
     specCubeFiles.push_back(GetBundleResourcePath(envName+"_px.png"));
     specCubeFiles.push_back(GetBundleResourcePath(envName+"_nx.png"));
     specCubeFiles.push_back(GetBundleResourcePath(envName+"_py.png")); 
@@ -350,12 +363,7 @@ void Init(int backingWidth, int backingHeight) {
     
     // keka setup
     std::vector<std::string> objModelNames;
-//    objModelNames.push_back("keka");
-//    objModelNames.push_back("keko");
-//    objModelNames.push_back("koko");
-//    objModelNames.push_back("wood");    
-//    objModelNames.push_back("snow");    
-//    objModelNames.push_back("snowman");
+
     objModelNames.push_back("pulmonTris");
     
     real scale = 4.;
@@ -397,30 +405,14 @@ void Init(int backingWidth, int backingHeight) {
 //        draw.shader_ = &cubemapShader;
     }
 
-    // ball setup
-    trans= trans+Real3(0,1.5,0);
-    {
-        objs.push_back(Object());
-        drawObjs.push_back(DrawObject());
-        
-        Object& obj = objs[objs.size()-1];
-        DrawObject& draw = drawObjs[drawObjs.size()-1];
-        
-        ObjReader objReader0;
-        ObjReader::Data dataobj = objReader0.read( GetBundleResourcePath("sphere.obj").c_str() );
-        initObjectFromOBJData(obj,dataobj);
-        obj.centerPivot();
-        //obj.uniformScale(scale);
-        obj.uniformTranslate(trans);
-        
-        draw.init(obj, GL_STATIC_DRAW);
-        draw.textId_[DrawObject::eText0] = makeGLCubeMapTexture(specCubeFiles);
-        SetGLTextureFilter(GL_TEXTURE_CUBE_MAP, GL_LINEAR, GL_LINEAR);
-        
-        draw.shader_ = &cubemapShader;
-    }
 
     GetGLError();
+    
+    // skybox setup
+    {
+        drawSkybox.init(specCubeFiles, textureShader);
+    }
+    GetGLError();    
     
     
     // Set up OpenGL state that will never change

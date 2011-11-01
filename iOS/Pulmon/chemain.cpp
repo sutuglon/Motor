@@ -81,10 +81,8 @@ namespace  {
     RunData data;
     
     // rotation and position
-    Real3 cameraTargets[3]= {
-        Real3 (0,-1.,0),
-        Real3 (1,-1.,0.5),
-        Real3 (-0.4,-1.,0)
+    Real3 cameraTargets[1]= {
+        Real3 (0,-1.,0)
     };
     int cameraTargetsIndex = 0;
     Real3 cameraPointTarget(cameraTargets[cameraTargetsIndex]);
@@ -159,7 +157,7 @@ void IdleHandler(const RunData& rundata) {
     scaleTarget = scaleTarget < 6.0? scaleTarget:6.;
     scaleTarget = scaleTarget > 0.5? scaleTarget:0.5;
 
-    real upperYconst = Pi/2-0.1;
+    real upperYconst = Pi/2-1.0;
     real lowerYconst = -upperYconst;
     
     rotateTarget[1] = rotateTarget[1]>upperYconst?upperYconst:rotateTarget[1];
@@ -180,21 +178,7 @@ void IdleHandler(const RunData& rundata) {
 
     mainChrono.reset();
     mainChrono.start();
-    /*
-    Real3 gravity = Matrix4RotateReal3(cam2w, data.lowAcc_); 
 
-    particles.update(tt, gravity, Real3(0,0,0));
-//    particles.update(tt, Real3(0,-1,0), Real3(0,0,0));
-    
-    collideLinearSweep (particles, sphereSize);
-
-    collideElasticLinear(particles, particleRadius*particleRadiusFactor);  //12 100pt
-    collideEachOtherQuad2(particles, particleRadius*particleRadiusFactor);//4
-    collideWithPolyTrees(particles, drawParticles.cloud_.mx_, colObjs, coltrees); //2
-    collideWithSphere(particles, sphereSize-2*(particleRadius*particleRadiusFactor));//0.1
-
-    particles.step();
-    */
     idleChrono.stop();
     //std::cout<<"idle"<<idleChrono.m_lapse*1e-03<<std::endl;
 }
@@ -206,13 +190,14 @@ void DisplayHandler(void)
     drawChrono.start();
     
     
-//	glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
-    glClear( GL_DEPTH_BUFFER_BIT );
+	glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+//    glClear( GL_DEPTH_BUFFER_BIT );
   	glCullFace(GL_BACK);
 
 
     Matrix4 rotmx=Matrix4Identity();
-    Matrix4Mult(rotmx, RotationY(-rotateCurrent[0]),RotationX(rotateCurrent[1]));
+//    Matrix4Mult(rotmx, RotationY(-rotateCurrent[0]),RotationX(rotateCurrent[1]));
+    Matrix4Mult(rotmx, RotationY(M_PI),rotmx);
     Real3 camPos = Matrix4RotateReal3(rotmx, positionCurrent);
     
     // set camera eye, at, up
@@ -225,31 +210,30 @@ void DisplayHandler(void)
     
     // skybox 5
     
-    glEnable(GL_DEPTH_TEST);
-    {
-        glDisable(GL_DEPTH_TEST);
-        glDisable(GL_CULL_FACE);
-        currentShader =  drawSkybox.cube_.shader_;
-        (*currentShader).bind();
-
-        
-        modelMx = drawSkybox.cube_.mx_;
-        
-        viewMx = w2cam;
-        SetCol(viewMx,3,Real3(0,0,0));
-        
-        Matrix4Mult(mvMx,viewMx, modelMx);
-        Matrix4Mult(mvpMx, projectionMx, mvMx);
-        glUniformMatrix4fv(glGetUniformLocation((*(drawSkybox.cube_.shader_)).getId(), "mvpMx"), 1, GL_FALSE, &mvpMx[0]);
-        
-        int a = 0;
-        glUniform1i(a= glGetUniformLocation((*currentShader).getId(), "text0") , 0);
-        glActiveTexture(GL_TEXTURE0);
-        
-        drawSkybox.draw();
-    
-        (*currentShader).unbind();   
-    }
+//    glEnable(GL_DEPTH_TEST);
+//    {
+//        glDisable(GL_DEPTH_TEST);
+//        glDisable(GL_CULL_FACE);
+//        currentShader =  drawSkybox.cube_.shader_;
+//        (*currentShader).bind();
+//
+//        modelMx = drawSkybox.cube_.mx_;
+//       
+//        viewMx = w2cam;
+//        SetCol(viewMx,3,Real3(0,0,0));
+//        
+//        Matrix4Mult(mvMx,viewMx, modelMx);
+//        Matrix4Mult(mvpMx, projectionMx, mvMx);
+//        glUniformMatrix4fv(glGetUniformLocation((*(drawSkybox.cube_.shader_)).getId(), "mvpMx"), 1, GL_FALSE, &mvpMx[0]);
+//        
+//        int a = 0;
+//        glUniform1i(a= glGetUniformLocation((*currentShader).getId(), "text0") , 0);
+//        glActiveTexture(GL_TEXTURE0);
+//        
+//        drawSkybox.draw();
+//    
+//        (*currentShader).unbind();   
+//    }
     
 
     glEnable(GL_DEPTH_TEST);
@@ -273,6 +257,7 @@ void DisplayHandler(void)
         float mixfactor = 0.2;
         
         modelMx = draw.mx_;
+        Matrix4Mult(modelMx, RotationX(rotateCurrent[1]),RotationY(rotateCurrent[0]));
         viewMx = w2cam;
         
         Matrix4Mult(mvMx, viewMx, modelMx);
@@ -284,14 +269,13 @@ void DisplayHandler(void)
         
         int a = 0;
 
-        glUniform4f(a = glGetUniformLocation((*currentShader).getId(), "_lp0"), -10., 5., 0., 1.);
-        glUniform4f(a = glGetUniformLocation((*currentShader).getId(), "_lp1"), 10., 0., 10., 1.);
-        glUniform4f(a = glGetUniformLocation((*currentShader).getId(), "_lp2"), 10., 0., -10., 1.);
         glUniformMatrix4fv(a = glGetUniformLocation((*currentShader).getId(), "mvMx"), 1, GL_FALSE, &mvMx[0]);
         glUniformMatrix4fv(a = glGetUniformLocation((*currentShader).getId(), "mvpMx"), 1, GL_FALSE, &mvpMx[0]);
         glUniformMatrix3fv(a = glGetUniformLocation((*currentShader).getId(),"cam2worldMx"), 1, 0, &cam2wRot[0]);
+        glUniformMatrix4fv(a = glGetUniformLocation((*currentShader).getId(),"cameraMatrix"), 1, 0, &cam2w[0]);
         glUniformMatrix3fv(a = glGetUniformLocation((*currentShader).getId(),"normalMx"), 1, 0, &normalMx[0]);
         glUniform1f(a = glGetUniformLocation((*currentShader).getId(),"mixfactor"), mixfactor);
+        glUniform1f(a = glGetUniformLocation((*currentShader).getId(),"Roughness"), data.slider0Value);
 
         glUniform1i(a= glGetUniformLocation((*currentShader).getId(), "text0") , 0);
         glActiveTexture(GL_TEXTURE0);

@@ -56,6 +56,8 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet EAGLView *glView;
+@property (retain, nonatomic) IBOutlet UISlider *slider0;
+- (IBAction)handleSlider0ValueChanged:(id)sender;
 
 @end
 

@@ -108,6 +108,7 @@
 @property (nonatomic) NSInteger animationFrameInterval;
 @property (readwrite,assign) Point3 lowAcc;
 @property (readwrite,assign) Point3 hiAcc;
+
 //@property UIAccelerationValue lowAccelX;
 //@property UIAccelerationValue lowAccelY;
 //@property UIAccelerationValue lowAccelZ;
@@ -123,5 +124,7 @@
 - (CGPoint)midPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint;
 
 - (void)handleSingleTap;
+
+- (void)setSlider0Value:(float)value;
 
 @end

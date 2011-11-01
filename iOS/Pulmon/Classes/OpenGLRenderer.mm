@@ -67,6 +67,7 @@ namespace  {
 
 @implementation OpenGLRenderer
 
+@synthesize slider0Value;
 
 - (BOOL) resizeFromLayer:(CAEAGLLayer *)layer
 //- (void) resizeWithWidth:(GLuint)width AndHeight:(GLuint)height
@@ -93,6 +94,7 @@ namespace  {
     runData.touchFingers_ = touchFingers;
     runData.touchTaps_ = touchTaps;
     runData.deltaDistance_ = deltaDistance;
+    runData.slider0Value = slider0Value;
 
     IdleHandler(runData);
 }
@@ -130,6 +132,8 @@ namespace  {
 
 		GetGLError();
 	}
+    
+    slider0Value = 0.75;
 	return self;
 }
 

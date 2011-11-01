@@ -32,9 +32,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "iPhoneGLEssentials.app"
-            BlueprintName = "iPhoneGLEssentials"
-            ReferencedContainer = "container:iPhoneGLEssentials.xcodeproj">
+            BuildableName = "iOSLung.app"
+            BlueprintName = "iOSLung"
+            ReferencedContainer = "container:iOSLung.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -45,7 +45,7 @@
       displayScale = "1.00"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       debugDocumentVersioning = "YES"
       enablesOpenGLESFrameCapture = "YES"
       allowLocationSimulation = "YES">
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "iPhoneGLEssentials.app"
-            BlueprintName = "iPhoneGLEssentials"
-            ReferencedContainer = "container:iPhoneGLEssentials.xcodeproj">
+            BuildableName = "iOSLung.app"
+            BlueprintName = "iOSLung"
+            ReferencedContainer = "container:iOSLung.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -73,9 +73,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "iPhoneGLEssentials.app"
-            BlueprintName = "iPhoneGLEssentials"
-            ReferencedContainer = "container:iPhoneGLEssentials.xcodeproj">
+            BuildableName = "iOSLung.app"
+            BlueprintName = "iOSLung"
+            ReferencedContainer = "container:iOSLung.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

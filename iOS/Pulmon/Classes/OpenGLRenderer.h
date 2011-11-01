@@ -64,6 +64,8 @@ typedef struct Point3 Point3;
 	
 
 }
+@property (nonatomic, assign) float slider0Value;
+
 - (id) initWithContext:(EAGLContext *) context AndDrawable:(id<EAGLDrawable>)drawable;
 - (BOOL) resizeFromLayer:(CAEAGLLayer *)layer;
 //- (id) initWithContext: (GLuint) defaultFBOName;

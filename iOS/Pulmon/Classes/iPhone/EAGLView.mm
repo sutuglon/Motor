@@ -62,6 +62,7 @@
 @dynamic animationFrameInterval;
 
 
+
 Chronometer& aniChrono = *Chronos::Singleton().add("aniChrono");
 
 
@@ -397,6 +398,10 @@ Chronometer& aniChrono = *Chronos::Singleton().add("aniChrono");
     // discard touch swipe
 }
 
+
+- (void)setSlider0Value:(float) value{
+    [renderer setSlider0Value:value];
+}
 
 
 @end

@@ -19,6 +19,7 @@ struct RunData {
     int touchType_;
     int touchFingers_;
     int touchTaps_;
+    float slider0Value;
 
     
     // accelerometer

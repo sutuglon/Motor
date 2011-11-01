@@ -3,6 +3,7 @@
 precision highp float;
 #endif
 
+uniform float Roughness;
 uniform samplerCube text0;  // cubemap
 uniform sampler2D text1;    // colormap
 uniform sampler2D text2;    // normalmap
@@ -10,9 +11,6 @@ uniform float mixfactor;
 
 varying vec3 lerp_vn;
 varying vec3 lerp_view;
-varying vec3 lerp_light0;
-varying vec3 lerp_light1;
-varying vec3 lerp_light2;
 varying vec2 lerp_uv;
 
 varying vec3 lerp_normal;
@@ -26,25 +24,21 @@ void main(void){
     mat3 tangent2worldMx = mat3(lerp_tangent, lerp_binormal, lerp_normal);
     normal = tangent2worldMx * vec3(normal.x,-normal.y,normal.z);
     
-    //vec3 normal = normalize( texture2D (text2, lerp_uv.st).rgb );
+    vec3 reflected = reflect(lerp_view, normal); // in world coords
     
-	float lamberFactor0 = max (dot (vec3(lerp_light0.x,-lerp_light0.y,lerp_light0.z), normal), 0.0) ;
-	float lamberFactor1 = max (dot (vec3(lerp_light1.x,-lerp_light1.y,lerp_light1.z), normal), 0.0) ;
-	float lamberFactor2 = max (dot (vec3(lerp_light2.x,-lerp_light2.y,lerp_light2.z), normal), 0.0) ;
-    float lamberFactor = 0.5*(lamberFactor0+lamberFactor1);
 
-    vec3 refldir = reflect(lerp_view, normal);
+    float NdotV = dot(normalize(lerp_view),normalize(reflected));
+    float specular =pow(max(0.0,NdotV),10.*Roughness);
+    float diffuse = 0.07;
     
-    vec4 reflcol = textureCube( text0, normalize(refldir) );
+    vec4 reflcol = textureCube( text0, normalize(reflected) );
 	vec4 texcol = texture2D (text1, lerp_uv.st);
-    vec4 bumpcol = vec4(texcol.xyz,1.0);
+//    vec3 ambient = vec3(.1,.04,.7);
+    vec4 bumpcol = vec4(texcol.xyz+texcol.xyz*0.1,1.0);
 
-
-    gl_FragColor = reflcol;
+    gl_FragColor = bumpcol  + reflcol*diffuse + reflcol*specular;
+    //gl_FragColor = vec4(specular,specular,specular,1.0);
 //    gl_FragColor = mix(bumpcol,reflcol,mixfactor);
-    
-//    gl_FragColor = reflcol;
 
-//    gl_FragColor = vec4(lamberFactor,lamberFactor,lamberFactor,1.0);
 }
 

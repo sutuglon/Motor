@@ -56,6 +56,7 @@
 
 @synthesize window;
 @synthesize glView;
+@synthesize slider0;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -168,8 +169,13 @@
 - (void)dealloc {
     [glView release];
     [window release];
+    [slider0 release];
     [super dealloc];
 }
 
 
+- (IBAction)handleSlider0ValueChanged:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    [glView setSlider0Value:[slider value]]; 
+}
 @end
